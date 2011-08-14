@@ -46,3 +46,30 @@ var addNewFormField = (function() {
 		document.getElementsByClassName(x)[0].appendChild(newField());
 	};
 })();
+
+(function() {
+
+var form2 = function() {
+	var args = typeof arguments[0]
+	this.type = arguments[0].type || "text";
+};
+
+form2.prototype = {
+	_get: function() {
+		
+	},
+	_formatText: function() {
+		
+	},
+	_formatList: function() {
+	
+	},
+	_formatRadio: function() {
+	
+	},
+	_formatFile: function() {
+	
+	}
+}
+
+})();
