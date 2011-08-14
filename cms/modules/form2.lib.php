@@ -44,6 +44,11 @@ class form2 implements module {
 	}
 
 	public function actionEdit() {
+		global $urlRequestRoot;
+		global $cmsFolder;
+		global $moduleFolder;
+		$inc_path = "$urlRequestRoot/$cmsFolder/$moduleFolder/form2";
+		
 		$html = "";
 		
 		$html .= "<table><tr><td>";
@@ -72,55 +77,8 @@ class form2 implements module {
 						o.setAttribute(i,attr[i]);
 				}
 			}
-			var addNewFormField = (function() {
-				var c = (function(){
-					var count = 0;
-					return {
-						inc: function() {
-							count++;
-						},
-						get: function() {
-							return count;
-						}
-					}
-				})();
-				function newField() {
-					var i = c.get();
-					var cover = document.createElement("div");
-					
-					var el = [];
-					var tmp;
-					tmp = document.createElement("input");
-					setAttributes(tmp, {
-						type: "text",
-						"name": "fieldName" + i 
-					});
-					el.push(tmp);
-					
-					tmp = document.createElement("select");
-					setAttributes(tmp, {
-						"name": "fieldType" + i
-					});
-					var possible = ["text", "time", "date", "checkbox", "file", "time", "number", "phone", "email", "name", "password", "ip", "list", "radio"];
-					for(i in possible) {
-						var temp = document.createElement("option");
-						setAttributes(temp,{"value": possible[i]});
-						temp.innerHTML = possible[i];
-						tmp.appendChild(temp);
-					}
-					el.push(tmp);
-					
-					for(j=0;j<el.length;j++)
-						cover.appendChild(el[j]);
-					return cover;
-				}
-				return function (x){
-					c.inc();
-					var i = c.get();
-					document.getElementsByClassName(x)[0].appendChild(newField());
-				};
-			})();
 		</script>
+		<script type="text/javascript" src="{$inc_path}/form2.js" ></script>
 Script;
 		
 		$html .= "</td></tr></table>";
