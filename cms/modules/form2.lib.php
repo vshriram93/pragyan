@@ -149,12 +149,6 @@ class Element {
 	}
 
 	function getHTML($new) {
-		$this->gen();
 		return $this->html;
-	}
-	
-	private function gen() {
-		$this->html = "";
-		$temp = "";
 	}
 }
