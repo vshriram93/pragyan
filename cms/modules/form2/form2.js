@@ -70,6 +70,6 @@ form2.prototype = {
 	_formatFile: function() {
 	
 	}
-}
+};
 
 })();
