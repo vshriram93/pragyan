@@ -51,7 +51,7 @@ class form2 implements module {
 		
 		$html = "";
 		
-		$html .= "<table><tr><td>";
+		//$html .= "<table><tr><td>";
 		
 		$html .= "<input type='button' value='+' onclick='addNewFormField(\"cms-form2\")' />";
 		
@@ -81,7 +81,7 @@ class form2 implements module {
 		<script type="text/javascript" src="{$inc_path}/form2.js" ></script>
 Script;
 		
-		$html .= "</td></tr></table>";
+		//$html .= "</td></tr></table>";
 		return $html;
 	}
 	
