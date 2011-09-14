@@ -53,7 +53,7 @@ class form2 implements module {
 		
 		//$html .= "<table><tr><td>";
 		
-		$html .= "<input type='button' value='+' onclick='addNewFormField(\"cms-form2\")' />";
+		$html .= "<input type='button' value='+' onclick='form2.addNewFormField(\"cms-form2\")' />";
 		
 		
 		$html .= "<div class=\"cms-form2-node\"><form class=\"cms-form2\"></form></div>";
