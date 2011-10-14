@@ -40,7 +40,14 @@ class form2 implements module {
 	}
 	
 	public function actionView() {
-		return "adfadsf";
+		//TODO : Import configuration from database and create form elements.
+		
+		$html = "";
+		
+		$html.= "<div class='form2'>";
+		
+		$html.="</div>";
+		return "Form View";
 	}
 
 	public function actionEdit() {

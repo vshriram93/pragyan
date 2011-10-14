@@ -4,3 +4,4 @@ cms/config.inc.php
 cms/modules/search/settings/database.php
 cms/uploads/
 *~
+.project
